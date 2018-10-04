@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Train Scheduler</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />-->
+    
+   
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous"> -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
+    <script src="https://momentjs.com/downloads/moment.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="text-center">Anytime is Train Time</h1>
+            <h2 class="text-center">Choo Choo. Chee Chee.</h2>
+            <h3 class="text-center" id="currentTime"></h3>
+        </div>
+        <div class="panel panel-info" id="schedule-panel">
+            <div class="panel-heading"  id="panelheader">
+                <h1 class="panel-title">Current Train Schedule</h1>
+            </div>
+            <div class="panel-body">
+                <table class="table ">
+                    <tr>
+                        <th><b>Train Name</b></th>
+                        <th><b>Destination</b></th>
+                        <th><b>Frequency (min)</b></th>
+                        <th><b>Next Arrival</b></th>
+                        <th><b>Minutes Away</b></th>
+                       
+                    </tr>
+                    <tbody id="schedule">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="panel panel-info" id="add-panel">
+            <div class="panel-heading" id="formheader">
+                <h1 class="panel-title" id="add-title">Add Train</h1>
+            </div>
+            <div class="panel-body">
+                <form>
+                    <div class="form-group">
+                        <label for="name">Train Name</label>
+                        <input class="form-control" id="name" type="text">
+                    </div>
+                    <div class="form-group">
+                        <label for="destination">Destination</label>
+                        <input class="form-control" id="destination" type="text">
+                    </div>
+                    <div class="form-group">
+                        <label for="time">First Train Time (HH:mm Military Time)</label>
+                        <input class="form-control" id="firstTrain" type="text">
+                    </div>
+                    <div class="form-group">
+                        <label for="frequency">Frequency (min)</label>
+                        <input class="form-control" id="frequency" type="number">
+                        
+                    </div>
+                    <button class="btn btn-info" id="submit-btn" type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+<!--    <script src="assets/javascript/app.js"></script> -->
+
+<script src="assets/javascript/app2.js"></script>
+
+</body>
+
+</html>

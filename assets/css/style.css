@@ -1,0 +1,26 @@
+#panelheader{
+background-color:#4682B4;
+color:white;
+border: #4682B4;
+
+}
+
+
+#formheader{
+    background-color:#4682B4;
+    color:white;
+    border: #4682B4;
+
+}
+
+.jumbotron{
+    color:white;
+    background-color:#a8361e;;
+}
+
+
+#submit-btn{
+
+    background-color:#4682B4;
+    color:white;
+}
